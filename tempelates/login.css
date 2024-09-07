@@ -1,0 +1,84 @@
+/* General styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(120deg, #89f7fe, #66a6ff);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  .container {
+    width: 400px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    backdrop-filter: blur(10px);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 2em;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+  
+  input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background: #66a6ff;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  input[type="submit"]:hover {
+    background: #89f7fe;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    animation: inputGlow 1s ease-in-out infinite alternate;
+  }
+  
+  /* Keyframes for input glow effect */
+  @keyframes inputGlow {
+    from {
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+    to {
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .container {
+    animation: fadeIn 1s ease;
+  }
+  

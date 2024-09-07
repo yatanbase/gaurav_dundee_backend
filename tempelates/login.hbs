@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style >
+        /* Global styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #fc466b, #3f5efb);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  overflow: hidden;
+}
+
+.container {
+  width: 400px;
+  padding: 60px 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  animation: fadeInDown 1.5s ease-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3), transparent);
+  animation: rotation 8s linear infinite;
+  z-index: 0;
+}
+
+.logo {
+  width: 100px;
+  margin: 0 auto 20px;
+  display: block;
+  z-index: 1;
+  position: relative;
+}
+
+h1 {
+  text-align: center;
+  color:(#3f5efb, #fc466b) ;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  animation: fadeIn 1.2s ease;
+  z-index: 1;
+  position: relative;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 1.1em;
+  transition: box-shadow 0.3s ease;
+  z-index: 1;
+  position: relative;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+  outline: none;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #fc466b, #3f5efb);
+  color: #fff;
+  font-size: 1.3em;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  z-index: 1;
+  position: relative;
+}
+
+input[type="submit"]:hover {
+  background: linear-gradient(135deg, #ff6f91, #4a6fe7);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Keyframes for the animation */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+    </style>
+</head>
+<body>
+<br>
+
+    <h1>Login Form</h1>
+    
+
+    <form action="/login" method="post" >
+        <input placeholder="Name" name="name" type="text">
+        <br>
+        <input placeholder="Password" name="password" type="password">
+        <br>
+        <input class="sub" type="submit">
+     <h3>Dont have a account ?</h3>
+    <a href="/signup">Create a new account</a>
+    <br>
+    <h4>Forget Password</h4>
+    </form>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #7f00ff, #e100ff);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  overflow: hidden;
+}
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  padding: 60px 40px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  animation: zoomIn 1.5s ease-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3), transparent);
+  animation: floatBackground 12s infinite ease-in-out;
+  z-index: 0;
+}
+
+.logo {
+  width: 120px;
+  margin: 0 auto 20px;
+  display: block;
+  z-index: 1;
+  position: relative;
+}
+
+h1 {
+  text-align: center;
+  color: #0c0202;
+  font-size: 3.5em;
+  margin-bottom: 40px;
+  z-index: 1;
+  position: relative;
+  animation: glowingText 1.5s ease-in-out infinite alternate;
+}
+
+button {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #8e2de2, #4a00e0);
+  color: #fff;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: transform 0.
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="../VoxView.png" alt="Logo" class=""Decoding Debate, Defining Discourse"">
+            <h1>Welcome to Our Site VoxView!</h1>
+            
+            <h4>Decoding Debate, Defining Discourse</h4>
+        </header>
+        <main>
+            <h2>Hello, user!</h2>
+            <p>We are delighted to have you here. Explore our website to discover more about what we offer.</p>
+            <button>Learn More</button>
+        </main>
+        <footer>
+            <p>&copy; 2024 Our Site. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
