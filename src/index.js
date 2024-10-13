@@ -3,7 +3,7 @@ const path = require("path")
 const app = express()
 // const hbs = require("hbs")
 const LogInCollection = require("./mongodb")
-const port = process.env.PORT || 3001
+const port = process.env.PORT || 3002
 app.use(express.json())
 
 app.use(express.urlencoded({ extended: false }))

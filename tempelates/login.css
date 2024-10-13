@@ -1,84 +1,130 @@
-/* General styling */
+/* General Styling */
 body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(120deg, #89f7fe, #66a6ff);
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    overflow: hidden;
-  }
-  
-  .container {
-    width: 400px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    backdrop-filter: blur(10px);
-  }
-  
-  h1 {
-    text-align: center;
-    color: #fff;
-    font-size: 2em;
-  }
-  
-  input[type="text"],
-  input[type="password"] {
-    width: 100%;
-    padding: 15px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 5px;
-    background: rgba(255, 255, 255, 0.1);
-    color: #fff;
-  }
-  
-  input[type="submit"] {
-    width: 100%;
-    padding: 15px;
-    border: none;
-    border-radius: 5px;
-    background: #66a6ff;
-    color: #fff;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  
-  input[type="submit"]:hover {
-    background: #89f7fe;
-  }
-  
-  input[type="text"],
-  input[type="password"] {
-    animation: inputGlow 1s ease-in-out infinite alternate;
-  }
-  
-  /* Keyframes for input glow effect */
-  @keyframes inputGlow {
-    from {
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-    }
-    to {
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
-    }
-  }
-  
-  @keyframes fadeIn {
-    0% {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(120deg, #2980b9, #6dd5fa, #ffffff);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  overflow: hidden;
+  animation: bgGradient 5s ease infinite;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  animation: fadeIn 1.5s ease-out;
+  width: 400px;
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 20px;
+  width: 100px;
+  opacity: 0.8;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+  color: #ffffff;
+  margin-bottom: 30px;
+  animation: fadeText 2s ease-in;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  margin: 15px 0;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: 1.2em;
+  transition: box-shadow 0.3s ease;
+  outline: none;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #ff6f91, #4a6fe7);
+  color: white;
+  font-size: 1.3em;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+input[type="submit"]:hover {
+  background: linear-gradient(135deg, #66d7ff, #914aff);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9em;
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  color: #a0c1ff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
       opacity: 0;
-      transform: translateY(-20px);
-    }
-    100% {
+      transform: translateY(-30px);
+  }
+  to {
       opacity: 1;
       transform: translateY(0);
-    }
   }
-  
-  .container {
-    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeText {
+  0% {
+      opacity: 0;
+      letter-spacing: -2px;
   }
-  
+  100% {
+      opacity: 1;
+      letter-spacing: 1px;
+  }
+}
+
+@keyframes bgGradient {
+  0% {
+      background: linear-gradient(120deg, #2980b9, #6dd5fa, #ffffff);
+  }
+  50% {
+      background: linear-gradient(120deg, #ff9966, #ff5e62, #ffffff);
+  }
+  100% {
+      background: linear-gradient(120deg, #2980b9, #6dd5fa, #ffffff);
+  }
+}
