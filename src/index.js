@@ -59,7 +59,7 @@ app.post('/login', async (req, res) => {
 
         if (check && check.password === req.body.password) {
             // Redirect to the specified URL
-            res.status(201).redirect("http://localhost:3000/");
+            res.status(201).redirect("https://g-dundee-frontend-cx1f.vercel.app//");
         } else {
             res.send("Incorrect password");
         }
